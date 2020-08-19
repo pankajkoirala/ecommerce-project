@@ -1,0 +1,22 @@
+.crousal {
+  width: 100%;
+  background: #000;
+}
+.crousalitem {
+  width: 100%;
+  height: 50px;
+}
+.image {
+  height: 500px;
+  width: 100%;
+}
+
+.carousel-indicators {
+  margin: 0px !important;
+}
+@media only screen and (max-width: 600px) {
+  .offer {
+    top: 44px;
+    position: relative;
+  }
+}

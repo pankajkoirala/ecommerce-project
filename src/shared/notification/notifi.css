@@ -1,0 +1,18 @@
+.toast {
+  background-color: #030303 !important;
+}
+.toast-info {
+  background-color: #3276b1 !important;
+}
+.toast-info2 {
+  background-color: #2f96b4 !important;
+}
+.toast-error {
+  background-color: #bd362f !important;
+}
+.toast-success {
+  background-color: #51a351 !important;
+}
+.toast-warning {
+  background-color: #f89406 !important;
+}

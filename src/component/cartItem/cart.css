@@ -1,0 +1,15 @@
+.cartitemfullpage {
+  margin-top: 20px;
+}
+.cartitemcard {
+  height: 350px;
+  width: 200px;
+  margin: 10px;
+  margin-top: 30px;
+}
+
+.cartItemImage {
+  width: 190px !important;
+  height: 180px;
+  margin: 5px;
+}

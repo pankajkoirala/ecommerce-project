@@ -1,0 +1,21 @@
+.fullinputpage {
+  margin-top: 1px;
+  background-image: url("https://img.freepik.com/free-photo/summer-heavens-bright-fresh-land_1088-743.jpg?size=626&ext=jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.inputheading {
+  text-align: center;
+}
+.inputitemselector {
+  text-align: center;
+}
+.iteminput {
+  padding: 10px;
+  background-color: burlywood;
+  height: auto;
+  border-radius: 10px;
+}
+.showMaterialInputbox {
+  display: inline;
+}

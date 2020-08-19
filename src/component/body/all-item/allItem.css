@@ -1,0 +1,29 @@
+.singleItem {
+  height: 300px;
+  width: 200px;
+  margin: 10px;
+}
+.singleItem:hover {
+  box-shadow: 5px 10px 8px 10px #888888;
+}
+
+.singleImage {
+  width: 190px !important;
+  height: 180px;
+  margin: 5px;
+}
+.fullitem {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 329px;
+  overflow: hidden;
+}
+.loadmore {
+  text-align: right;
+  margin-right: 90px;
+  font-size: 20px;
+  font-weight: bold;
+}

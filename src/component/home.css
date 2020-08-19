@@ -1,0 +1,9 @@
+nav {
+  height: 30px;
+  z-index: 999;
+  color: cornsilk;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}

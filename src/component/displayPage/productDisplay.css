@@ -1,0 +1,30 @@
+.productImage {
+  height: 500px;
+  width: 500px;
+  padding: 20px;
+}
+.productimgDiv {
+  width: 500px;
+}
+.productdisplay {
+  margin: 0 !important;
+  margin-top: 10px !important;
+}
+.deliveryOption {
+  background-color: rgb(240, 236, 237);
+  padding: 10px;
+}
+.productdetail {
+  padding: 20px;
+}
+@media screen and (max-width: 600px) {
+  .productImage {
+    height: 300px;
+    width: auto;
+  }
+}
+.addbuybutton {
+  height: auto;
+  width: 100px;
+  margin: 10px;
+}

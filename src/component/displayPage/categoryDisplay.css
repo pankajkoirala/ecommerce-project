@@ -1,0 +1,15 @@
+.fullelectronic {
+  background-color: rgb(95, 173, 167);
+
+  margin-top: 10px;
+}
+.fullcard {
+  height: auto;
+  width: 310px;
+  margin: 10px;
+}
+.electricItemImage {
+  height: 300px !important;
+  width: 300px !important;
+  margin: 2px;
+}
