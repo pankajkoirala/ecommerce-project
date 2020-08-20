@@ -3,6 +3,7 @@ import ElectronicComp from "../../component/displayPage/categoryDisplay";
 import Axios from "axios";
 import { connect } from "react-redux";
 import { addtoCart } from "../../const/action";
+import {read} from "../../axiosInstance/axiosService"
 
 const ElectronicItemCont = (props) => {
   const [allItem, setAllItem] = useState([]);
@@ -16,7 +17,8 @@ const ElectronicItemCont = (props) => {
   };
 
   const fetchData = () => {
-    Axios.get("http://localhost:8000/api/ecommerce")
+
+      read("/api/ecommerce")
       .then((res) => {
         setAllItem(res.data);
       })

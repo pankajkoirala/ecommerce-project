@@ -92,6 +92,9 @@ const Example = (props) => {
             </div>
           </Nav>
           <NavItem className="d-flex justify-content-start m-2">
+          <div className="mx-2 font-weight-bold">
+              <Link to="/orderlist">orderList</Link>
+            </div>
             <div className="mx-2 font-weight-bold">
               <Link to="/contactus">sign up</Link>
             </div>

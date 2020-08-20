@@ -1,0 +1,19 @@
+.orderpage {
+  margin: 20px;
+}
+.orderImg {
+  height: 50px;
+  width: 50px;
+}
+span {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  span {
+    display: inline;
+    font-weight: bold;
+  }
+  .itemheading {
+    display: none;
+  }
+}

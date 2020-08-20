@@ -1,9 +1,8 @@
 import React,{useState,useEffect} from "react"
 import Bodycomponent from "../../component/body/body"
-import Axios from "axios"
 import { connect } from "react-redux";
 import { addtoCart } from "../../const/action";
-
+import {read} from "../../axiosInstance/axiosService"
 const BodyCont=(props)=>{
   const[allItem,setAllItem]=useState([])
   useEffect(()=>{
@@ -16,7 +15,9 @@ const BodyCont=(props)=>{
   };
   
   const fetchData=()=>{
-    Axios.get("http://localhost:8000/api/ecommerce").then((res)=>{
+
+
+      read("/api/ecommerce").then((res)=>{
     setAllItem(res.data)
   }).catch((err)=>err)
   }

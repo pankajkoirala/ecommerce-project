@@ -11,7 +11,6 @@ setResponse("")
 
 
 
-console.log(response);
   
 const postitem=(data)=>{
   const formData = new FormData();
@@ -21,13 +20,14 @@ const postitem=(data)=>{
   formData.append("productDetail", data.productDetail);
   formData.append("warranty", data.warranty);
   formData.append("photo", data.photo);
-
-
-  Axios.post(`http://localhost:8000/api/ecommerce`,formData,{
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
-  }).then((res)=>{
+  
+  
+  Axios({
+    method: 'post',
+    url: 'http://localhost:8000/api/ecommerce',
+    data: formData,
+    config: { headers: {'Content-Type': 'application/x-www-form-urlencoded',"Access-Control-Allow-Origin": "*", }}
+    }).then((res)=>{
 setResponse(res.data);
   }).catch((err)=>{
     console.log(err);
