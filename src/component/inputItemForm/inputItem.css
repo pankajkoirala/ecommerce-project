@@ -1,8 +1,8 @@
 .fullinputpage {
   margin-top: 1px;
-  background-image: url("https://img.freepik.com/free-photo/summer-heavens-bright-fresh-land_1088-743.jpg?size=626&ext=jpg");
+  background-image: url("https://data.whicdn.com/images/66293690/original.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 .inputheading {
   text-align: center;
@@ -12,10 +12,10 @@
 }
 .iteminput {
   padding: 10px;
-  background-color: burlywood;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translate(-50% -50%);
   height: auto;
   border-radius: 10px;
-}
-.showMaterialInputbox {
-  display: inline;
+  margin-top: 80px;
+  margin-bottom: 80px !important;
 }

@@ -30,12 +30,12 @@ const ImportItemComponent = (props) => {
           }) => (
             <Form className="d-flex justify-content-center ">
               <FormGroup className=" loginform">
-                <h5 className="text-left m-4">
-                 plese login
-                </h5>
-
+                <div className="text-center">
+               <img className="loginImg" src="https://jpcprinting.co.uk/wp-content/uploads/2015/08/blank-profile.png" alt=""/>
+               <p className="text-white font-weight-bold">Login</p>
+               </div>
                 <div className="email">
-                  <Label for="exampleCity">email</Label>
+                  <Label className="text-white font-weight-bold" for="exampleCity">email</Label>
                   <Input
                     type="email"
                     name="email"
@@ -54,7 +54,7 @@ const ImportItemComponent = (props) => {
                 </div>
 
                 <div className="password">
-                  <Label for="exampleCity">password</Label>
+                  <Label className="text-white font-weight-bold" for="exampleCity">password</Label>
                   <Input
                     type="password"
                     name="password"

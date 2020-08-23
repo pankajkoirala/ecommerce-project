@@ -4,12 +4,29 @@
   margin-top: 10px;
 }
 .fullcard {
-  height: auto;
-  width: 310px;
+  height: 200px;
+  width: 125px;
   margin: 10px;
+  margin-top: 20px;
 }
 .electricItemImage {
-  height: 300px !important;
-  width: 300px !important;
+  width: 119px !important;
+  height: 110px !important;
   margin: 2px;
+}
+.fullcard .infomaterial {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+  overflow: hidden;
+}
+.fullcard:hover .infomaterial {
+  height: 130px;
+}
+.fullcard:hover .electricItemImage {
+  opacity: 0.5;
 }

@@ -10,6 +10,7 @@
   color: azure;
 }
 .navmenu {
-  background-color: rgb(231, 240, 236);
   height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translate(-50% -50%);
 }

@@ -11,6 +11,8 @@ import {
 } from "reactstrap";
 import "./categoryDisplay.css";
 import { useParams } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 
 const ElectronicItem = (props) => {
   const [SelelectedData, setSelectedData] = useState([]);
@@ -35,22 +37,23 @@ const ElectronicItem = (props) => {
                   alt="Card image cap"
                 />
               </Link>
-              <CardBody>
+              <CardBody className="infomaterial">
                 <CardTitle>{arg ? arg.productName : ""}</CardTitle>
                 <CardSubtitle className="font-weight-bold">
                   Rs {arg ? arg.productCost : ""}
                 </CardSubtitle>
-                <CardText>{arg ? arg.productDetail : ""}</CardText>
-              </CardBody>
-              <button
-                className="m-1"
+                {/* <CardText>{arg ? arg.productDetail : ""}</CardText> */}
+                <div
+                className="m-1 addbutton text-center"
                 onClick={() => {
                   props.addToCart(arg);
                   Toast("success", `${arg.productName} added to cart`);
                 }}
               >
-                add to cart
-              </button>
+              <FontAwesomeIcon icon={faShoppingCart}/>
+              </div>
+              </CardBody>
+           
             </Card>
           </div>
         );

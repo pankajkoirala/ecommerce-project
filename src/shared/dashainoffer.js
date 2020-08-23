@@ -1,9 +1,17 @@
 import React from "react";
 import "./dashain.css";
+import pk from "../../src/assets/socialmedia/facebook.png"
 
 const Dashainoffer = () => {
+ 
+
 return(
-  <h1 className="offer bg-danger">dashain offer</h1>
+<div className="pankaj">
+
+
+</div>
+
+
 )
 
 };

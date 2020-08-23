@@ -20,8 +20,7 @@ const HomepageComponent = (props) => {
   return (
     <div>
       <Router>
-        <NavebarUpper />
-        {/* <DashainOffer/> */}
+        <NavebarUpper/>
         <nav>
           <NavBar />
         </nav>
@@ -32,9 +31,9 @@ const HomepageComponent = (props) => {
             path="/inputitem"
             component={ImportItemContainer}
           />
+          <PrivateRouter exact path="/orderlist" component={OrderItemCont} />
           <Route exact path="/login" component={LoginContainer} />
           <Route exact path="/cartitems" component={CartDisplayCont} />
-          <Route exact path="/orderlist" component={OrderItemCont} />
           <Route exact path="/contactus" component={ContactUs} />
           <Route exact path="/:category" component={DisplayCategory} />
           <Route
@@ -43,6 +42,7 @@ const HomepageComponent = (props) => {
             component={ProductDisplay}
           />
         </Switch>
+        <DashainOffer/>
         <Footer />
       </Router>
     </div>

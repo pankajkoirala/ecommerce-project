@@ -5,15 +5,28 @@
   height: 50px;
   width: 50px;
 }
-span {
+.allproductdetail span {
   display: none;
 }
+
+.orderItemNoOrder {
+  height: 370px;
+}
+.totalcost {
+  margin-left: 0px !important;
+}
 @media only screen and (max-width: 600px) {
-  span {
+  .allproductdetail span {
     display: inline;
     font-weight: bold;
   }
   .itemheading {
     display: none;
   }
+  .orderItemNoOrder {
+    height: auto;
+  }
+}
+.infoofOrder {
+  margin: 0 !important;
 }

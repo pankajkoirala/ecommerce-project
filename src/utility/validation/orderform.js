@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 
-export const orderValidator = Yup.object().shape({
+export const OrderValidator = Yup.object().shape({
   name: Yup.string()
   .min(2, "Too Short!")
   .max(50, "Too Long!").required("Required"),
@@ -8,4 +8,12 @@ export const orderValidator = Yup.object().shape({
   .max(99999, "Too Long!").required("Required"),
   phoneNumber:Yup.number()
   .required("Required"),
+  information:Yup.string().min(2, "Too Short!")
+  .max(50, "Too Long!").required("Required"),
+
 });
+
+// name: "",
+// address: "",
+// phoneNumber: "",
+// order: nonduplicate,

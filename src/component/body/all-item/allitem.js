@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import "./allItem.css";
-import Toast from "../../../shared/notification/notification"
+import Toast from "../../../shared/notification/notification";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+
 
 const AllItem = (props) => {
-
   let electronic = props.everyItem.filter(
     (arg) => arg.category === "electronic"
   );
@@ -17,7 +19,6 @@ const AllItem = (props) => {
     (arg) => arg.category === "health-and-care"
   );
 
- 
   return (
     <div>
       <div>
@@ -25,7 +26,7 @@ const AllItem = (props) => {
 
         <div className="fullitem ">
           {electronic.map((arg, index) => {
-            if (index < 14) {
+            if (index < 20) {
               return (
                 <div key={index}>
                   <Card className="singleItem">
@@ -38,24 +39,23 @@ const AllItem = (props) => {
                         alt="Card image cap"
                       />
                     </Link>
-                    <CardBody>
+                    <CardBody className="productinfo">
                       <CardTitle className="font-weight-bold">
                         {arg.productName}
                       </CardTitle>
                       <CardSubtitle className="font-weight-bold">
                         Rs. {arg.productCost}
                       </CardSubtitle>
+                      <div
+                        className="m-1 addbutton"
+                        onClick={() => {
+                          props.addToCart(arg);
+                          Toast("success", `${arg.productName} added to cart`);
+                        }}
+                      >
+                       <FontAwesomeIcon icon={faShoppingCart} />
+                      </div>
                     </CardBody>
-                    <div id={arg._id}></div>
-                    <button
-                      className="m-1"
-                      onClick={() => {
-                        props.addToCart(arg);
-                        Toast("success",`${arg.productName} added to cart` )
-                      }}
-                    >
-                      add to cart
-                    </button>
                   </Card>
                 </div>
               );
@@ -71,7 +71,7 @@ const AllItem = (props) => {
           <h4 className="text-center">Household Item</h4>
           <div className="fullitem ">
             {household.map((arg, index) => {
-              if (index < 14) {
+              if (index < 20) {
                 return (
                   <div key={index}>
                     <Card className="singleItem">
@@ -85,23 +85,26 @@ const AllItem = (props) => {
                           alt="Card image cap"
                         />{" "}
                       </Link>
-                      <CardBody>
+                      <CardBody className="productinfo">
                         <CardTitle className="font-weight-bold">
                           {arg.productName}
                         </CardTitle>
                         <CardSubtitle className="font-weight-bold">
                           Rs. {arg.productCost}
                         </CardSubtitle>
+                        <div
+                          className="m-1 addbutton"
+                          onClick={() => {
+                            props.addToCart(arg);
+                            Toast(
+                              "success",
+                              `${arg.productName} added to cart`
+                            );
+                          }}
+                        >
+                            <FontAwesomeIcon icon={faShoppingCart} />
+                        </div>
                       </CardBody>
-                      <button
-                        className="m-1"
-                        onClick={() => {
-                          props.addToCart(arg);
-                          Toast("success",`${arg.productName} added to cart` )
-                        }}
-                      >
-                        add to cart
-                      </button>
                     </Card>
                   </div>
                 );
@@ -118,7 +121,7 @@ const AllItem = (props) => {
         <h4 className="text-center">Fashion</h4>
         <div className="fullitem ">
           {fashion.map((arg, index) => {
-            if (index < 14) {
+            if (index < 20) {
               return (
                 <div key={index}>
                   <Card className="singleItem">
@@ -130,23 +133,23 @@ const AllItem = (props) => {
                         alt="Card image cap"
                       />{" "}
                     </Link>
-                    <CardBody>
+                    <CardBody className="productinfo">
                       <CardTitle className="font-weight-bold">
                         {arg.productName}
                       </CardTitle>
                       <CardSubtitle className="font-weight-bold">
                         Rs. {arg.productCost}
                       </CardSubtitle>
+                      <div
+                        className="m-1 addbutton"
+                        onClick={() => {
+                          props.addToCart(arg);
+                          Toast("success", `${arg.productName} added to cart`);
+                        }}
+                      >
+                         <FontAwesomeIcon icon={faShoppingCart} />
+                      </div>
                     </CardBody>
-                    <button
-                      className="m-1"
-                      onClick={() => {
-                        props.addToCart(arg);
-                        Toast("success",`${arg.productName} added to cart` )
-                      }}
-                    >
-                      add to cart
-                    </button>
                   </Card>
                 </div>
               );
@@ -161,7 +164,7 @@ const AllItem = (props) => {
         <h4 className="text-center">Sports Item</h4>
         <div className="fullitem ">
           {sport.map((arg, index) => {
-            if (index < 14) {
+            if (index < 20) {
               return (
                 <div key={index}>
                   <Card className="singleItem">
@@ -173,23 +176,23 @@ const AllItem = (props) => {
                         alt="Card image cap"
                       />{" "}
                     </Link>
-                    <CardBody>
+                    <CardBody className="productinfo">
                       <CardTitle className="font-weight-bold">
                         {arg.productName}
                       </CardTitle>
                       <CardSubtitle className="font-weight-bold">
                         Rs. {arg.productCost}
                       </CardSubtitle>
+                      <div
+                        className="m-1 addbutton"
+                        onClick={() => {
+                          props.addToCart(arg);
+                          Toast("success", `${arg.productName} added to cart`);
+                        }}
+                      >
+                         <FontAwesomeIcon icon={faShoppingCart} />
+                      </div>
                     </CardBody>
-                    <button
-                      className="m-1"
-                      onClick={() => {
-                        props.addToCart(arg);
-                        Toast("success",`${arg.productName} added to cart` )
-                      }}
-                    >
-                      add to cart
-                    </button>
                   </Card>
                 </div>
               );
@@ -204,7 +207,7 @@ const AllItem = (props) => {
         <h4 className="text-center">Health & Care</h4>
         <div className="fullitem ">
           {healthcare.map((arg, index) => {
-            if (index < 14) {
+            if (index < 20) {
               return (
                 <div key={index}>
                   <Card className="singleItem">
@@ -217,24 +220,23 @@ const AllItem = (props) => {
                         alt="Card image cap"
                       />
                     </Link>
-                    <CardBody>
+                    <CardBody className="productinfo">
                       <CardTitle className="font-weight-bold">
                         {arg.productName}
                       </CardTitle>
                       <CardSubtitle className="font-weight-bold">
                         Rs. {arg.productCost}
                       </CardSubtitle>
+                      <div
+                        className="m-1 addbutton"
+                        onClick={() => {
+                          props.addToCart(arg);
+                          Toast("success", `${arg.productName} added to cart`);
+                        }}
+                      >
+                          <FontAwesomeIcon icon={faShoppingCart} />
+                      </div>
                     </CardBody>
-                    <button
-                      className="m-1"
-                      onClick={() => {
-                        props.addToCart(arg);
-                        Toast("success",`${arg.productName} added to cart` )
-                      }}
-                    >
-                      {" "}
-                      add to cart
-                    </button>
                   </Card>
                 </div>
               );

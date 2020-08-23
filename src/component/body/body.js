@@ -6,7 +6,7 @@ import AllItem from "./all-item/allitem"
 const Body=(props)=>{
 
   return(
-    <div>
+    <div className="bg-dark">
       <Crousal/>
       <AllItem everyItem={props.allItem}
       addToCart={props.addToCart}

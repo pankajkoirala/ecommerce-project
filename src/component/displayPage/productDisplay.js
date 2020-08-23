@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./productDisplay.css";
 import Toast from "../../shared/notification/notification"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 
 const ProductDisplayPage = (props) => {
   const [product, setProduct] = useState([]);
@@ -31,19 +33,18 @@ const ProductDisplayPage = (props) => {
             <div className="productdetail ">
               <h2>{arg.productName}</h2>
               <h4>Product info:{arg.productDetail}</h4>
-
               <h4>Home Delivery: Available</h4>
               <h4>Warranry: yes/no</h4>
               <h2>Cost only Rs.{arg.productCost}</h2>
-              <button
-                className="m-1 addbuybutton"
+              <div //addbutton allitem css bata lya ko
+                className="m-1 addbutton w-25 text-center"
                 onClick={() => {
                   props.addToCart(arg);
                   Toast("success", `${arg.productName} added to cart`);
                 }}
               >
-                add to cart
-              </button>
+              <FontAwesomeIcon icon={faShoppingCart}/>
+              </div>
             </div>
             <div className=" deliveryOption">
               <div>
