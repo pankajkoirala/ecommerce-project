@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faPhoneAlt, faShoppingCart, faListAlt} from "@fortawesome/free-solid-svg-icons";
 import {
   Collapse,
   Navbar,
@@ -21,7 +24,7 @@ const Example = (props) => {
   return (
     <div>
       <Navbar  className="navmenu" light expand="lg">
-        <Link className="mx-4 font-weight-bold text-dark" to="/">
+        <Link className="mx-4 font-weight-bold text-white" to="/"><FontAwesomeIcon className="mx-1" icon={faHome}/>
           Home
         </Link>
         <NavbarToggler  onClick={toggle} />
@@ -30,7 +33,7 @@ const Example = (props) => {
             <NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle
-                  className="mx-4 font-weight-bold text-dark"
+                  className="mx-4 font-weight-bold text-white"
                   nav
                   caret
                 >
@@ -73,36 +76,36 @@ const Example = (props) => {
             </NavItem>
             <NavItem>
               <div className="mt-2 mx-4 font-weight-bold ">
-                <Link className="text-dark " to="/inputitem">
+                <Link className="text-white " to="/inputitem">
                   Input items
                 </Link>
               </div>
             </NavItem>
             <NavItem>
               <div className="mt-2 mx-4 font-weight-bold ">
-                <Link className="text-dark" to="/cartitems">
+                <Link className="text-white" to="/cartitems"><FontAwesomeIcon className="mx-1" icon={faShoppingCart}/>
                   cart
                 </Link>
               </div>
             </NavItem>
             <div className="mt-2 mx-4 font-weight-bold text-secondary">
-              <Link className="text-dark" to="/contactus">
+              <Link className="text-white" to="/contactus"><FontAwesomeIcon className="mx-1" icon={faPhoneAlt}/>
                 Contact us
               </Link>
             </div>
           </Nav>
           <NavItem className="d-flex justify-content-start m-2">
-          <div className="mx-2 font-weight-bold  text-dark">
-              <Link to="/inputitem"> Input items</Link>
+          <div className="mx-2 font-weight-bold  ">
+              <Link className="text-white" to="/inputitem"> Input items</Link>
             </div>
-          <div className="mx-2 font-weight-bold  text-dark">
-              <Link to="/orderlist">orderList</Link>
+          <div className="mx-2 font-weight-bold  ">
+              <Link className="text-white" to="/orderlist"><FontAwesomeIcon className="mx-1" icon={ faListAlt}/>orderList </Link>
             </div>
-            <div className="mx-2 font-weight-bold  text-dark">
-              <Link to="/contactus">sign up</Link>
+            <div className="mx-2 font-weight-bold  ">
+              <Link className="text-white" to="/contactus">sign up</Link>
             </div>
-            <div className="mx-2 font-weight-bold  text-dark">
-              <Link to="/login">login</Link>
+            <div className="mx-2 font-weight-bold  ">
+              <Link className="text-white" to="/login">login</Link>
             </div>
           </NavItem>
         </Collapse>

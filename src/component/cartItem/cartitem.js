@@ -53,18 +53,19 @@ const CartItem = (props) => {
           }) => (
             <div>
               {nonduplicate.length === 0 ? (
-                <h3 className="text-center cartItemPleseSelect">
+                <div className="cartItemPleseSelect">
+                <h3 className="text-center plesetext ">
                   plese select some item
-                </h3>
+                </h3></div>
               ) : (
                 <div>
                   <div className="d-flex justify-content-center">
                     <Form className="cartorderForm col-md-6">
-                      <div className="h5 text-center font-weight-bold">
+                      <div className="h5 text-center font-weight-bold text-white">
                         fill your detail
                       </div>
                       <div className="">
-                        <Label> Name</Label>
+                        <Label className="text-white"> Name</Label>
                         <Input
                           type="text"
                           name="name"
@@ -83,7 +84,7 @@ const CartItem = (props) => {
                         )}
                       </div>
                       <div className="">
-                        <Label> address</Label>
+                        <Label className="text-white"> address</Label>
                         <Input
                           type="text"
                           name="address"
@@ -102,7 +103,7 @@ const CartItem = (props) => {
                         )}
                       </div>
                       <div className="">
-                        <Label> phoneNumber</Label>
+                        <Label className="text-white"> phoneNumber</Label>
                         <Input
                           type="number"
                           name="phoneNumber"
@@ -121,7 +122,7 @@ const CartItem = (props) => {
                         )}
                       </div>
                       <div className="">
-                        <Label> information</Label>
+                        <Label className="text-white"> information</Label>
                         <Input
                           type="text"
                           name="information"

@@ -20,10 +20,13 @@ const HomepageComponent = (props) => {
   return (
     <div>
       <Router>
+      <DashainOffer/>
         <NavebarUpper/>
         <nav>
           <NavBar />
         </nav>
+       
+
         <Switch>
           <Route exact path="/" component={BodyCont} />
           <PrivateRouter
@@ -42,7 +45,6 @@ const HomepageComponent = (props) => {
             component={ProductDisplay}
           />
         </Switch>
-        <DashainOffer/>
         <Footer />
       </Router>
     </div>

@@ -19,14 +19,14 @@ const Footer = () => {
         <div className=" location col-md-5 d-flex justify-content-center">
           <div className="allcontact">
           <div className="font-weight-bold my-3">
-            <FontAwesomeIcon icon={faMapMarkerAlt} />
+            <FontAwesomeIcon className="mx-2" icon={faMapMarkerAlt} />
             location rtrtyertyer
           </div>
           <div className="font-weight-bold my-3">
-            <FontAwesomeIcon icon={faPhoneAlt} /> +977 9843765501
+            <FontAwesomeIcon className="mx-2" icon={faPhoneAlt} /> +977 9843765501
           </div>
           <div className="font-weight-bold my-3">
-            <FontAwesomeIcon icon={faEnvelope} /> Support@gmail.com
+            <FontAwesomeIcon className="mx-2" icon={faEnvelope} /> Support@gmail.com
           </div>
           </div>
         </div>

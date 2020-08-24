@@ -1,0 +1,35 @@
+.contactusfullPage {
+  margin-top: 50px;
+  text-align: center;
+}
+.contextTextHeading {
+  background-image: url("https://assets.nrdc.org/sites/default/files/styles/full_content--retina/public/media-uploads/owen-lystrup-bolgim0qwkg-unsplash.jpg?itok=E92FZlIx");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: auto;
+}
+.contextText {
+  margin-top: 0px !important;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translate(-50% -50%);
+  height: auto;
+}
+.contactMap {
+  height: 400px;
+  width: 100%;
+  margin: 0px !important;
+}
+.contactusButton {
+  height: 50px;
+  width: 200px;
+  margin: 10px;
+  border-radius: 50px;
+  background-color: rgb(146, 122, 122);
+  font-size: 25px;
+  font-weight: bold !important;
+}
+.contactusButton:hover {
+  background-color: seagreen;
+}
