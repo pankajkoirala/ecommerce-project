@@ -3,7 +3,7 @@ import { getLocalStorage} from "../const/axiosConst/tokenStorage"
 
 import {base_URL,token_key} from "../const/axiosConst/baseURL"
 
-let headers={ 'Content-Type': 'application/x-www-form-urlencoded'}
+let headers= {'Content-Type': 'application/x-www-form-urlencoded' }
 if(localStorage.getItem(token_key)){
   headers["x-auth-token"]=getLocalStorage(token_key)
 }

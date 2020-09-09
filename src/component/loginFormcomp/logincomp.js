@@ -5,6 +5,7 @@ import {  FormGroup, Label, Input, Form } from "reactstrap";
 import {LoginValidator} from "../../utility/validation/loginValidation"
 
 const ImportItemComponent = (props) => {
+
   return (
     <div className="fulllogin">
       <div>
@@ -14,7 +15,7 @@ const ImportItemComponent = (props) => {
             password: "",
           }}
           onSubmit={(values) => {
-            console.log(values);
+            props.login(values)
           }}
           validationSchema={LoginValidator}
         >
@@ -70,6 +71,7 @@ const ImportItemComponent = (props) => {
                       {errors.password}
                     </span>
                   )}
+                  <div className="text-white">{props.response}</div>
                 </div>
                 <button onClick={handleSubmit}>submit</button>
               </FormGroup>

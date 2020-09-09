@@ -13,5 +13,5 @@ export const update = (endpoint, data) => {
 };
 
 export const deleteData = (endpoint, id) => {
-  return axiosInstance.delete(endpoint, id);
+  return axiosInstance.delete(endpoint,id);
 };

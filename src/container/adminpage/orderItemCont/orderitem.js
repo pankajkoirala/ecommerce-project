@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from "react"
-import OrderItemComp from "../../component/orderItem/orderItem"
-import {read,deleteData} from "../../axiosInstance/axiosService"
+import OrderItemComp from "../../../component/adminpage.js/orderItem/orderItem"
+import {read,deleteData} from "../../../axiosInstance/axiosService"
 
 const OrderItemCont=()=>{
   const[orderInfo,setOrderinfo]=useState([])

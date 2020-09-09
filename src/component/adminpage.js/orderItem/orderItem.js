@@ -1,7 +1,7 @@
 import React from "react";
 import "./order.css";
-import Toast from "../../shared/notification/notification";
-import { reloadPage } from "../../shared/refreshPage";
+import Toast from "../../../shared/notification/notification";
+import { reloadPage } from "../../../shared/refreshPage";
 
 const OrderItem = (props) => {
   let ALLorderlist = props.orderInfo;

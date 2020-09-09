@@ -14,7 +14,7 @@ import BodyCont from "../container/bodyCont/bodyCont";
 import PrivateRouter from "./privateRouter";
 import ContactUs from "../container/contactus/contsctusCont";
 import CartDisplayCont from "../container/cartitem/cartitem";
-import OrderItemCont from "../container/orderItemCont/orderitem";
+import Adminpage from "../component/adminpage.js/adminpage"
 
 const HomepageComponent = (props) => {
   return (
@@ -25,8 +25,6 @@ const HomepageComponent = (props) => {
         <nav>
           <NavBar />
         </nav>
-       
-
         <Switch>
           <Route exact path="/" component={BodyCont} />
           <PrivateRouter
@@ -34,7 +32,7 @@ const HomepageComponent = (props) => {
             path="/inputitem"
             component={ImportItemContainer}
           />
-          <PrivateRouter exact path="/orderlist" component={OrderItemCont} />
+          <PrivateRouter exact path="/orderlist" component={Adminpage} />
           <Route exact path="/login" component={LoginContainer} />
           <Route exact path="/cartitems" component={CartDisplayCont} />
           <Route exact path="/contactus" component={ContactUs} />

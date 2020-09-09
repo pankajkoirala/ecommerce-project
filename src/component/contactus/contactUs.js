@@ -2,10 +2,9 @@ import React from "react";
 import "./contact.css";
 import { FormGroup, Label, Input, Form } from "reactstrap";
 import { Formik } from "formik";
-import {ContactformValidator} from "../../utility/validation/contactFormValidator"
+import { ContactformValidator } from "../../utility/validation/contactFormValidator";
 
 let ContactUsComp = (props) => {
-  console.log(props);
   return (
     <div className="contactusfullPage">
       <Formik
@@ -16,6 +15,8 @@ let ContactUsComp = (props) => {
           aboutYou: "",
         }}
         onSubmit={(values) => {
+          props.contactus(values);
+          props.feedback(values);
           console.log(values);
         }}
         validationSchema={ContactformValidator}
@@ -100,10 +101,15 @@ let ContactUsComp = (props) => {
                         )}
                       </div>
                       <div className="">
-                        <Label className="font-weight-bold " for="exampleZip">
-                          anout you
-                        </Label>
-                        <Input
+                        <div>
+                          {" "}
+                          <Label className="font-weight-bold " for="exampleZip">
+                            Feedback
+                          </Label>
+                        </div>
+
+                        <textarea
+                          className="w-100 "
                           type="text"
                           name="aboutYou"
                           value={values.aboutYou}

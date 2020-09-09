@@ -1,8 +1,9 @@
-import React, { Component, useState } from "react"
+import React from "react"
 import { Redirect, Route } from "react-router-dom";
-
+import {getLocalStorage} from "../const/axiosConst/tokenStorage"
+ 
 const PrivateRouter=({ component: Component, ...rest })=>{
- const[authorize,setAuthorize]=useState(true)
+  let authorize= getLocalStorage("token")
 
   return(
  <Route

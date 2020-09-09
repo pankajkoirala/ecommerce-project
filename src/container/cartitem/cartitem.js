@@ -2,6 +2,7 @@ import React from "react";
 import CartitemComp from "../../component/cartItem/cartitem";
 import axios from "axios"
 import { useState } from "react";
+import {base_URL} from "../../const/axiosConst/baseURL"
 
 
 let CartitemContainer = () => {
@@ -11,7 +12,7 @@ let CartitemContainer = () => {
    
     axios({
       method: 'post',
-      url: 'http://localhost:8000/api/order',
+      url: base_URL+'/api/order',
       data: data,
       config: { headers: {'Content-Type': 'application/x-www-form-urlencoded' }}
       })

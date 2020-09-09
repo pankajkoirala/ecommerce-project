@@ -1,9 +1,11 @@
 import React,{useState} from "react"
 import ImportItemComp from "../../component/inputItemForm/inputItemComp"
 import Axios from "axios"
+import {base_URL} from "../../const/axiosConst/baseURL"
+
 
 const ImportItemContainer=()=>{
-  const[response,setResponse]=useState("hello")
+  const[response,setResponse]=useState("")
  
 let responseErse=()=>{
 setResponse("")
@@ -24,7 +26,7 @@ const postitem=(data)=>{
   
   Axios({
     method: 'post',
-    url: 'http://localhost:8000/api/ecommerce',
+    url: base_URL+'/api/ecommerce',
     data: formData,
     config: { headers: {'Content-Type': 'application/x-www-form-urlencoded',"Access-Control-Allow-Origin": "*", }}
     }).then((res)=>{
